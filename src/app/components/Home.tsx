@@ -1,12 +1,12 @@
 "use client";
 
-import { string } from "prop-types";
+// import { string } from "prop-types";
 import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import axios from "axios";
-import Genres from "./genres";
+import Genres from "./Genres";
 import { BsPlayFill } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 import dynamic from "next/dynamic";
@@ -81,7 +81,7 @@ const Home = () => {
 	}, [movie]);
 
 	return (
-		<div className="bg-secondary relative px-4 md:px-0">
+		<div className="bg-primary relative px-4 md:px-0">
 			{isLoading && <Loading />}
 
 			<div className="container mx-auto min-h-[calc(100vh-77px) flex items-center relative}">
@@ -150,7 +150,7 @@ const Home = () => {
 							className="cursor-pointer w-8 h-8 flex justify-center items-center rounded-lg opacity-50 hover:opacity-75 hover:bg-[dark-gray]"
 							onClick={() => setShowPlayer(false)}
 						>
-							<IoMdClose className="h-5" />
+							<IoMdClose className="h-8" />
 						</div>
 					</div>
 
