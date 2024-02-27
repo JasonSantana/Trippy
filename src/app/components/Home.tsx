@@ -52,14 +52,14 @@ const Home = () => {
 		axios
 			.get(`https://api.themoviedb.org/3/search/movie`, {
 				params: {
-					api_key: process.env.NEXT_PUBLIC_API_KEY,
+					api_key: process.env.NEXT_PUBLIC_API,
 					query: searchMovie,
 				},
 			})
 			.then((res) => {
 				axios
 					.get(
-						`https://api.themoviedb.org/3/movie/${res?.data?.results[0]?.id}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&append_to_response=videos`
+						`https://api.themoviedb.org/3/movie/${res?.data?.results[0]?.id}?api_key=${process.env.NEXT_PUBLIC_API}&append_to_response=videos`
 					)
 					.then((res) => {
 						setMovie(res.data);
