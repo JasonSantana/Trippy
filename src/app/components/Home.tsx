@@ -1,6 +1,6 @@
 "use client";
 
-// import { string } from "prop-types";
+import { string } from "prop-types";
 import React, { useState, useEffect } from "react";
 import Loading from "./Loading";
 import Image from "next/image";
@@ -81,10 +81,10 @@ const Home = () => {
 	}, [movie]);
 
 	return (
-		<div className="bg-primary relative px-4 md:px-0">
+		<div className="bg-black relative px-4 md:px-0">
 			{isLoading && <Loading />}
 
-			<div className="container mx-auto min-h-[calc(100vh-77px) flex items-center relative}">
+			<div className="container mx-auto min-h-[calc(100vh-77px)] flex items-center relative}">
 				<div className="flex-col lg:flex-row flex gap-10 lg:mx-10 py-20">
 					<div className="mx-auto flex-none relative">
 						<Image
